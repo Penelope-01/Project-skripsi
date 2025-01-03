@@ -16,6 +16,7 @@ class Admin extends CI_Controller
     {
         $data['title'] = 'Dashboard';
         $data['user'] = $this->db->get_where('tb_user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['total_santri'] = $this->Model_santri->getSantriCount();
 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
