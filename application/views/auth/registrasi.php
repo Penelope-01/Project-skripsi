@@ -32,12 +32,6 @@
                           <div class="form-group mb-3">
                               <input type="password" class="form-control" id="password2" name="password2" placeholder="Konfirmasi password">
                           </div>
-                          <!-- <div class="d-flex mt-1 justify-content-between">
-                          <div class="form-check">
-                              <input class="form-check-input input-primary" type="checkbox" id="customCheckc1" checked="">
-                              <label class="form-check-label text-muted" for="customCheckc1">I agree to all the Terms & Condition</label>
-                          </div>
-                      </div> -->
                           <div class="d-grid mt-4">
                               <button type="submit" class="btn btn-primary">Buat Akun</button>
                           </div>
