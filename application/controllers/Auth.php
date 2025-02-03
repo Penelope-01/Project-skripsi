@@ -116,8 +116,6 @@ class Auth extends CI_Controller
             $nama = htmlspecialchars($this->input->post('nama', true));
             $email = htmlspecialchars($this->input->post('email', true));
             $password = $this->input->post('password1');
-
-            // enkripsi password pakek sha256 dan salt
             $encryptedPassword = encryptPassword($password);
             $hashedPassword = $encryptedPassword['hashedPassword'];
             $salt = $encryptedPassword['salt'];
@@ -126,8 +124,8 @@ class Auth extends CI_Controller
                 'nama' => $nama,
                 'email' => $email,
                 'gambar' => 'default.jpeg',
-                'password' => $hashedPassword, // password sudah di hash 
-                'salt' => $salt, // simpan nilai salt 
+                'password' => $hashedPassword, 
+                'salt' => $salt, 
                 'role_id' => 2,
                 'is_active' => 1,
                 'date_created' => time()
